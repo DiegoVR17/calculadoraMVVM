@@ -2,14 +2,42 @@ package com.example.ejemplocalculadoramvvm
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
 import com.example.ejemplocalculadoramvvm.databinding.ActivityMainBinding
+import com.google.android.material.snackbar.Snackbar
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var mainBinding: ActivityMainBinding
+    private lateinit var mainActivityMainBinding: ActivityMainBinding
+    private lateinit var mainViewModel: MainViewModel
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        val view = mainBinding.root
+        mainActivityMainBinding = ActivityMainBinding.inflate(layoutInflater)
+        val view = mainActivityMainBinding.root
         setContentView(view)
+
+        mainViewModel = ViewModelProvider(this)[MainViewModel::class.java]
+
+        val resultObserver = Observer<Double>{result ->
+            mainActivityMainBinding.textViewResult.text = result.toString()
+
+        }
+
+        mainViewModel.result.observe(this,resultObserver)
+
+        val errorMsgObserver = Observer<String>{errorMsg ->
+            Snackbar.make(view,errorMsg,Snackbar.LENGTH_INDEFINITE)
+                .setAction("Continuar"){}
+                .show()
+        }
+
+        mainViewModel.errorMsg.observe(this,errorMsgObserver)
+
+        mainActivityMainBinding.buttonAdd.setOnClickListener {
+            mainViewModel.validateNumbers(mainActivityMainBinding.firstNumberEditText.text.toString(),mainActivityMainBinding.secondNumberEditText.text.toString())
+
+        }
     }
 }
