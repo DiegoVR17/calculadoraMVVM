@@ -7,5 +7,5 @@
     <string name="substractionButton">-</string>
     <string name="multiplyButton">*</string>
     <string name="divideButton">/</string>
-    <string name="resultView">Resultado</string>
+    <string name="resultView">Resultado = </string>
 </resources>
