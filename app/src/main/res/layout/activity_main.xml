@@ -66,28 +66,36 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/addButton" />
+            android:text="@string/addButton"
+            android:textSize="30dp"
+            android:textColor="@color/whitesmoke"/>
 
         <Button
             android:id="@+id/buttonSubst"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/substractionButton" />
+            android:text="@string/substractionButton"
+            android:textSize="30dp"
+            android:textColor="@color/whitesmoke"/>
 
         <Button
             android:id="@+id/buttonMultip"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/multiplyButton" />
+            android:text="@string/multiplyButton"
+            android:textSize="30dp"
+            android:textColor="@color/whitesmoke"/>
 
         <Button
             android:id="@+id/buttonDivide"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/divideButton" />
+            android:text="@string/divideButton"
+            android:textSize="30dp"
+            android:textColor="@color/whitesmoke"/>
     </LinearLayout>
 
     <LinearLayout
