@@ -2,13 +2,13 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.EjemploCalculadoraMVVM" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorPrimary">@color/orchid</item> -->
     </style>
 
     <style name="Theme.EjemploCalculadoraMVVM" parent="Base.Theme.EjemploCalculadoraMVVM" />
 
     <style name="Theme.APISplashScreen" parent="Theme.SplashScreen">
-        <item name="windowSplashScreenBackground">@color/darkorange</item>
+        <item name="windowSplashScreenBackground">@color/orchid</item>
         <item name="windowSplashScreenAnimatedIcon">@drawable/calculadora_logo</item>
         <item name="windowSplashScreenAnimationDuration">1000</item>
         <item name="postSplashScreenTheme">@style/Base.Theme.EjemploCalculadoraMVVM</item>
