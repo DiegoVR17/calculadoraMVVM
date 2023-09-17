@@ -3,6 +3,7 @@ package com.example.ejemplocalculadoramvvm
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.example.ejemplocalculadoramvvm.databinding.ActivityMainBinding
@@ -14,6 +15,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var mainViewModel: MainViewModel
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        installSplashScreen()
         mainActivityMainBinding = ActivityMainBinding.inflate(layoutInflater)
         val view = mainActivityMainBinding.root
         setContentView(view)
